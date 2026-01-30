@@ -1,0 +1,138 @@
+# HydroQ-QC-Assistant Configuration
+# All thresholds and model parameters - NO MAGIC NUMBERS
+
+# =============================================================================
+# Feature Extraction
+# =============================================================================
+features:
+  # Neighborhood analysis
+  neighborhood:
+    window_size: 5  # pixels
+    min_valid_neighbors: 3
+  
+  # Slope calculation
+  slope:
+    method: "horn"  # Options: horn, zevenbergen
+    units: "degrees"  # Options: degrees, radians, percent
+  
+  # Roughness
+  roughness:
+    window_size: 3
+  
+  # Laplacian
+  laplacian:
+    kernel_size: 3
+
+# =============================================================================
+# Anomaly Detection
+# =============================================================================
+anomaly_detection:
+  # Isolation Forest
+  isolation_forest:
+    enabled: true
+    n_estimators: 100
+    contamination: 0.1  # Expected proportion of outliers
+    max_samples: "auto"
+    random_state: 42
+    n_jobs: -1
+  
+  # Z-Score based detection
+  zscore:
+    enabled: true
+    threshold: 3.0  # Standard deviations
+    use_mad: true  # Use Median Absolute Deviation
+    mad_threshold: 3.5
+  
+  # Autoencoder (Feature flag - disabled by default)
+  autoencoder:
+    enabled: false
+    hidden_layers: [64, 32, 16, 32, 64]
+    epochs: 100
+    batch_size: 32
+    reconstruction_threshold_percentile: 95
+
+# =============================================================================
+# Scoring & Ranking
+# =============================================================================
+scoring:
+  # Weight for combining different detectors
+  weights:
+    isolation_forest: 0.5
+    zscore: 0.3
+    spatial_consistency: 0.2
+  
+  # Confidence level thresholds
+  confidence_thresholds:
+    high: 0.8
+    medium: 0.5
+    # Below medium is "low"
+  
+  # Priority calculation
+  priority:
+    # Factor in local depth variance
+    depth_variance_weight: 0.3
+    # Factor in spatial clustering
+    cluster_weight: 0.4
+    # Factor in anomaly score
+    score_weight: 0.3
+
+# =============================================================================
+# Output Generation
+# =============================================================================
+outputs:
+  # Heatmap
+  heatmap:
+    colormap: "RdYlGn_r"  # Red = high anomaly, Green = normal
+    resolution_factor: 1.0  # 1.0 = same as input
+    nodata_value: -9999
+  
+  # Anomaly polygons
+  polygons:
+    anomaly_threshold: 0.6  # Minimum score to create polygon
+    min_area_pixels: 9  # Minimum connected component size
+    simplify_tolerance: 0.0001  # Polygon simplification (degrees)
+    buffer_distance: 0  # Buffer around anomalies
+
+# =============================================================================
+# Seam Detection
+# =============================================================================
+seam_detection:
+  enabled: true
+  boundary_width: 5  # pixels to check at tile edges
+  gradient_threshold: 0.3  # Relative gradient difference
+
+# =============================================================================
+# Density Checks (for point data)
+# =============================================================================
+density:
+  grid_resolution: 1.0  # meters
+  min_points_per_cell: 3
+  max_points_per_cell: 100
+  gap_threshold: 5  # cells with no points
+
+# =============================================================================
+# Processing
+# =============================================================================
+processing:
+  # Chunk size for large rasters
+  chunk_size: 1024  # pixels
+  # Maximum file size (MB)
+  max_file_size_mb: 500
+  # Coordinate systems
+  default_crs: "EPSG:4326"
+  # NoData handling
+  nodata_values: [-9999, -99999, null]
+
+# =============================================================================
+# Export
+# =============================================================================
+export:
+  # Report formats
+  formats:
+    - "json"
+    - "geojson"
+    - "geotiff"
+  # Include raw features in export
+  include_features: false
+  # Decimal precision for coordinates
+  coordinate_precision: 6

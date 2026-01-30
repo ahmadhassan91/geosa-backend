@@ -1,0 +1,234 @@
+{
+  "embedded_anomalies": [
+    {
+      "type": "spike",
+      "center": [
+        533,
+        264
+      ],
+      "radius": 10,
+      "magnitude": 11.153253656833062
+    },
+    {
+      "type": "spike",
+      "center": [
+        181,
+        419
+      ],
+      "radius": 8,
+      "magnitude": 9.741732923658107
+    },
+    {
+      "type": "spike",
+      "center": [
+        402,
+        275
+      ],
+      "radius": 13,
+      "magnitude": 5.013810444511154
+    },
+    {
+      "type": "spike",
+      "center": [
+        186,
+        466
+      ],
+      "radius": 11,
+      "magnitude": 9.807025832714357
+    },
+    {
+      "type": "spike",
+      "center": [
+        142,
+        451
+      ],
+      "radius": 9,
+      "magnitude": 8.870665697118486
+    },
+    {
+      "type": "spike",
+      "center": [
+        701,
+        389
+      ],
+      "radius": 6,
+      "magnitude": 5.703643619199919
+    },
+    {
+      "type": "spike",
+      "center": [
+        437,
+        358
+      ],
+      "radius": 9,
+      "magnitude": 11.598673988684283
+    },
+    {
+      "type": "spike",
+      "center": [
+        204,
+        436
+      ],
+      "radius": 10,
+      "magnitude": 11.869523333595644
+    },
+    {
+      "type": "spike",
+      "center": [
+        415,
+        232
+      ],
+      "radius": 9,
+      "magnitude": 11.795195715396762
+    },
+    {
+      "type": "spike",
+      "center": [
+        430,
+        427
+      ],
+      "radius": 6,
+      "magnitude": 6.266091283343819
+    },
+    {
+      "type": "spike",
+      "center": [
+        425,
+        256
+      ],
+      "radius": 7,
+      "magnitude": 8.6494757544342
+    },
+    {
+      "type": "spike",
+      "center": [
+        746,
+        196
+      ],
+      "radius": 5,
+      "magnitude": 13.265898036986776
+    },
+    {
+      "type": "hole",
+      "center": [
+        356,
+        476
+      ],
+      "radius": 9,
+      "magnitude": 8.365679676007446
+    },
+    {
+      "type": "hole",
+      "center": [
+        602,
+        411
+      ],
+      "radius": 10,
+      "magnitude": 14.05181479908078
+    },
+    {
+      "type": "hole",
+      "center": [
+        154,
+        414
+      ],
+      "radius": 7,
+      "magnitude": 13.099436555269952
+    },
+    {
+      "type": "hole",
+      "center": [
+        263,
+        161
+      ],
+      "radius": 6,
+      "magnitude": 10.060951747684555
+    },
+    {
+      "type": "hole",
+      "center": [
+        197,
+        496
+      ],
+      "radius": 5,
+      "magnitude": 12.474691529551752
+    },
+    {
+      "type": "hole",
+      "center": [
+        700,
+        147
+      ],
+      "radius": 9,
+      "magnitude": 11.283259532758606
+    },
+    {
+      "type": "hole",
+      "center": [
+        81,
+        309
+      ],
+      "radius": 9,
+      "magnitude": 8.228961552339602
+    },
+    {
+      "type": "hole",
+      "center": [
+        553,
+        411
+      ],
+      "radius": 9,
+      "magnitude": 7.262456679639964
+    },
+    {
+      "type": "hole",
+      "center": [
+        185,
+        246
+      ],
+      "radius": 8,
+      "magnitude": 13.147572305804571
+    },
+    {
+      "type": "hole",
+      "center": [
+        303,
+        65
+      ],
+      "radius": 14,
+      "magnitude": 8.847577246445857
+    },
+    {
+      "type": "seam_vertical",
+      "col": 528,
+      "offset": 2.435767780347816
+    },
+    {
+      "type": "seam_horizontal",
+      "row": 107,
+      "offset": 1.43538071728044
+    },
+    {
+      "type": "seam_vertical",
+      "col": 246,
+      "offset": 1.5580572889237903
+    },
+    {
+      "type": "seam_horizontal",
+      "row": 101,
+      "offset": 2.151889760345132
+    },
+    {
+      "type": "noise_band",
+      "row_start": 321,
+      "row_end": 345
+    }
+  ],
+  "dataset_info": {
+    "width": 800,
+    "height": 600,
+    "resolution": 1.0,
+    "base_depth": -75.0,
+    "seed": 123
+  }
+}

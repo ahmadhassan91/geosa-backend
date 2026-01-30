@@ -1,0 +1,6 @@
+# This file marks the data directories for tracking
+# Actual files go in subdirectories
+
+samples/
+outputs/
+uploads/
