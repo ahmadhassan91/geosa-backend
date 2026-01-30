@@ -29,8 +29,8 @@ class BaseDTO(BaseModel):
 
 class UserCreate(BaseDTO):
     """Request to create a new user."""
-    username: str = Field(..., min_length=3, max_length=50)
-    email: str = Field(..., pattern=r"^[\w\.-]+@[\w\.-]+\.\w+$")
+    username: str = Field(..., min_length=3, max_length=100)
+    email: str = Field(...)
     password: str = Field(..., min_length=8)
     role: str = Field(default="viewer")
 
