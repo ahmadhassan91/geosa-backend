@@ -43,6 +43,10 @@ database_url = os.environ.get(
     "DATABASE_URL",
     "postgresql://postgres:postgres@localhost:5432/hydroq_qc"
 )
+# Heroku provides DATABASE_URL starting with postgres://, but SQLAlchemy 2.0 requires postgresql://
+if database_url and database_url.startswith("postgres://"):
+    database_url = database_url.replace("postgres://", "postgresql://", 1)
+
 # Ensure it's a sync URL (not asyncpg)
 database_url = database_url.replace("postgresql+asyncpg://", "postgresql://")
 config.set_main_option("sqlalchemy.url", database_url)
@@ -78,8 +82,12 @@ def run_migrations_online() -> None:
     In this scenario we need to create an Engine and associate a
     connection with the context.
     """
+    # Override the URL in the config section to ensure engine_from_config uses our fixed URL
+    section = config.get_section(config.config_ini_section, {})
+    section["sqlalchemy.url"] = config.get_main_option("sqlalchemy.url")
+
     connectable = engine_from_config(
-        config.get_section(config.config_ini_section, {}),
+        section,
         prefix="sqlalchemy.",
         poolclass=pool.NullPool,
     )
