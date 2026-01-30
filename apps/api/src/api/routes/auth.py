@@ -25,22 +25,17 @@ from src.infrastructure.repositories import SQLAlchemyUserRepository
 router = APIRouter(prefix="/auth", tags=["auth"])
 
 # Password hashing
-# Password hashing
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["pbkdf2_sha256"], deprecated="auto")
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
-    """Verify a password against its hash, truncating to 72 bytes for bcrypt."""
-    # Truncate to 72 bytes for bcrypt limit
-    truncated_password = plain_password[:72]
-    return pwd_context.verify(truncated_password, hashed_password)
+    """Verify a password against its hash."""
+    return pwd_context.verify(plain_password, hashed_password)
 
 
 def hash_password(password: str) -> str:
-    """Hash a password, truncating to 72 bytes if necessary for bcrypt."""
-    # Truncate to 72 bytes for bcrypt limit
-    truncated_password = password[:72]
-    return pwd_context.hash(truncated_password)
+    """Hash a password."""
+    return pwd_context.hash(password)
 
 
 def create_access_token(user_id: UUID) -> tuple[str, int]:
