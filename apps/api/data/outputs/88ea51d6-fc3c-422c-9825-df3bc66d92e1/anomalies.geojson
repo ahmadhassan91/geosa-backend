@@ -1,0 +1,1802 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "8598beea-9878-420d-8c92-69d210543b64",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.97083333333334,
+              21.645833333333336
+            ],
+            [
+              38.97083333333334,
+              21.633333333333336
+            ],
+            [
+              38.987500000000004,
+              21.633333333333336
+            ],
+            [
+              38.987500000000004,
+              21.645833333333336
+            ],
+            [
+              38.97083333333334,
+              21.645833333333336
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "8598beea-9878-420d-8c92-69d210543b64",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7742,
+        "confidence_level": "medium",
+        "qc_priority": 0.4883,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.9096235567150419,
+            "zscore": 0.5484992508163149
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest"
+          ],
+          "pixel_count": 12
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "98a92c0e-fb2a-4304-832b-b7de27b21c9f",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.087500000000006,
+              21.554166666666667
+            ],
+            [
+              39.087500000000006,
+              21.541666666666668
+            ],
+            [
+              39.10000000000001,
+              21.541666666666668
+            ],
+            [
+              39.10000000000001,
+              21.554166666666667
+            ],
+            [
+              39.087500000000006,
+              21.554166666666667
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "98a92c0e-fb2a-4304-832b-b7de27b21c9f",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7283,
+        "confidence_level": "medium",
+        "qc_priority": 0.4826,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8394868508976342,
+            "zscore": 0.543115737306637
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "def0c7cb-35d4-4a35-aaa5-a79be67086bc",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.858333333333334,
+              21.658333333333335
+            ],
+            [
+              38.858333333333334,
+              21.645833333333336
+            ],
+            [
+              38.87083333333334,
+              21.645833333333336
+            ],
+            [
+              38.87083333333334,
+              21.658333333333335
+            ],
+            [
+              38.858333333333334,
+              21.658333333333335
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "def0c7cb-35d4-4a35-aaa5-a79be67086bc",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.727,
+        "confidence_level": "medium",
+        "qc_priority": 0.4532,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8909804618272449,
+            "zscore": 0.45372023323443067
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bc8635a4-d048-49ae-b433-18d7c67966c7",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.09166666666667,
+              21.583333333333336
+            ],
+            [
+              39.09166666666667,
+              21.56666666666667
+            ],
+            [
+              39.10416666666667,
+              21.56666666666667
+            ],
+            [
+              39.10416666666667,
+              21.583333333333336
+            ],
+            [
+              39.09166666666667,
+              21.583333333333336
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "bc8635a4-d048-49ae-b433-18d7c67966c7",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7559,
+        "confidence_level": "medium",
+        "qc_priority": 0.4528,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8918298674831724,
+            "zscore": 0.5293894982542734
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest"
+          ],
+          "pixel_count": 12
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ac507699-a19a-4da3-8567-a3242978e1d6",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.045833333333334,
+              21.458333333333336
+            ],
+            [
+              39.045833333333334,
+              21.445833333333336
+            ],
+            [
+              39.05833333333334,
+              21.445833333333336
+            ],
+            [
+              39.05833333333334,
+              21.458333333333336
+            ],
+            [
+              39.045833333333334,
+              21.458333333333336
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "ac507699-a19a-4da3-8567-a3242978e1d6",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7741,
+        "confidence_level": "medium",
+        "qc_priority": 0.4041,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8515703437995321,
+            "zscore": 0.6449547216456171
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "672ffd61-a779-4f5d-a2bd-68b3980a435e",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.75,
+              21.695833333333333
+            ],
+            [
+              38.75,
+              21.683333333333334
+            ],
+            [
+              38.7625,
+              21.683333333333334
+            ],
+            [
+              38.7625,
+              21.695833333333333
+            ],
+            [
+              38.75,
+              21.695833333333333
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "672ffd61-a779-4f5d-a2bd-68b3980a435e",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.8307,
+        "confidence_level": "high",
+        "qc_priority": 0.3607,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.9243887339536128,
+            "zscore": 0.6746168439067404
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "8899f43b-8d3a-4c33-a2c9-dbcf8766e63d",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.99166666666667,
+              21.650000000000002
+            ],
+            [
+              38.99166666666667,
+              21.637500000000003
+            ],
+            [
+              39.00416666666667,
+              21.637500000000003
+            ],
+            [
+              39.00416666666667,
+              21.650000000000002
+            ],
+            [
+              38.99166666666667,
+              21.650000000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "8899f43b-8d3a-4c33-a2c9-dbcf8766e63d",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.6988,
+        "confidence_level": "medium",
+        "qc_priority": 0.3499,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8874837248286168,
+            "zscore": 0.38444268481865085
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3c938409-f7b8-475a-9931-157aab07243c",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.7625,
+              21.76666666666667
+            ],
+            [
+              38.7625,
+              21.745833333333337
+            ],
+            [
+              38.775000000000006,
+              21.745833333333337
+            ],
+            [
+              38.775000000000006,
+              21.76666666666667
+            ],
+            [
+              38.7625,
+              21.76666666666667
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "3c938409-f7b8-475a-9931-157aab07243c",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.6813,
+        "confidence_level": "medium",
+        "qc_priority": 0.315,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8557668581730075,
+            "zscore": 0.39060261041674005
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest"
+          ],
+          "pixel_count": 15
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "617284a2-a054-4e14-9532-a90dcce4224f",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.795833333333334,
+              22.50416666666667
+            ],
+            [
+              39.795833333333334,
+              22.483333333333338
+            ],
+            [
+              39.80833333333334,
+              22.483333333333338
+            ],
+            [
+              39.80833333333334,
+              22.50416666666667
+            ],
+            [
+              39.795833333333334,
+              22.50416666666667
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "617284a2-a054-4e14-9532-a90dcce4224f",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.8148,
+        "confidence_level": "high",
+        "qc_priority": 0.2964,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8766474080159583,
+            "zscore": 0.7116689169146653
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 15
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0161ca41-4357-4fe8-888b-c3469a46b815",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.21666666666667,
+              21.025
+            ],
+            [
+              38.21666666666667,
+              21.0125
+            ],
+            [
+              38.22916666666667,
+              21.0125
+            ],
+            [
+              38.22916666666667,
+              21.025
+            ],
+            [
+              38.21666666666667,
+              21.025
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "0161ca41-4357-4fe8-888b-c3469a46b815",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.8343,
+        "confidence_level": "high",
+        "qc_priority": 0.2835,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8744459321395858,
+            "zscore": 0.7673075764867812
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "7f704336-a5c7-48e2-b1d5-19c3bd956b73",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.07083333333333,
+              21.041666666666668
+            ],
+            [
+              38.07083333333333,
+              21.02916666666667
+            ],
+            [
+              38.075,
+              21.02916666666667
+            ],
+            [
+              38.075,
+              21.025000000000002
+            ],
+            [
+              38.079166666666666,
+              21.025000000000002
+            ],
+            [
+              38.079166666666666,
+              21.020833333333336
+            ],
+            [
+              38.09166666666667,
+              21.020833333333336
+            ],
+            [
+              38.09166666666667,
+              21.033333333333335
+            ],
+            [
+              38.0875,
+              21.033333333333335
+            ],
+            [
+              38.0875,
+              21.0375
+            ],
+            [
+              38.083333333333336,
+              21.0375
+            ],
+            [
+              38.083333333333336,
+              21.041666666666668
+            ],
+            [
+              38.07083333333333,
+              21.041666666666668
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "7f704336-a5c7-48e2-b1d5-19c3bd956b73",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7957,
+        "confidence_level": "medium",
+        "qc_priority": 0.2794,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8828709677197605,
+            "zscore": 0.6504688999610506
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 19
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "f902676c-3a01-4623-9968-f107c3b7176f",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.05,
+              21.054166666666667
+            ],
+            [
+              38.05,
+              21.0375
+            ],
+            [
+              38.0625,
+              21.0375
+            ],
+            [
+              38.0625,
+              21.054166666666667
+            ],
+            [
+              38.05,
+              21.054166666666667
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "f902676c-3a01-4623-9968-f107c3b7176f",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.803,
+        "confidence_level": "high",
+        "qc_priority": 0.2752,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.9043039122841003,
+            "zscore": 0.6342429727844868
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 12
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0db2e352-c6c7-42e4-ae01-8ffde24f043d",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.575,
+              22.945833333333336
+            ],
+            [
+              39.575,
+              22.92916666666667
+            ],
+            [
+              39.587500000000006,
+              22.92916666666667
+            ],
+            [
+              39.587500000000006,
+              22.945833333333336
+            ],
+            [
+              39.575,
+              22.945833333333336
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "0db2e352-c6c7-42e4-ae01-8ffde24f043d",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.7639,
+        "confidence_level": "medium",
+        "qc_priority": 0.2749,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8732675912681499,
+            "zscore": 0.5817513606935606
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest"
+          ],
+          "pixel_count": 12
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "a217d58a-028a-4e37-a9d8-6229ac93d04b",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.208333333333336,
+              21.041666666666668
+            ],
+            [
+              38.208333333333336,
+              21.02916666666667
+            ],
+            [
+              38.22083333333334,
+              21.02916666666667
+            ],
+            [
+              38.22083333333334,
+              21.041666666666668
+            ],
+            [
+              38.208333333333336,
+              21.041666666666668
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "a217d58a-028a-4e37-a9d8-6229ac93d04b",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7897,
+        "confidence_level": "medium",
+        "qc_priority": 0.2744,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8358740285948708,
+            "zscore": 0.7126912114623968
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2a55be81-0e6a-45f8-aae6-41ff764c1c0e",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.55416666666667,
+              21.5125
+            ],
+            [
+              39.55416666666667,
+              21.5
+            ],
+            [
+              39.56666666666667,
+              21.5
+            ],
+            [
+              39.56666666666667,
+              21.5125
+            ],
+            [
+              39.55416666666667,
+              21.5125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "2a55be81-0e6a-45f8-aae6-41ff764c1c0e",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.7958,
+        "confidence_level": "medium",
+        "qc_priority": 0.2742,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8161349892361103,
+            "zscore": 0.7619934565220807
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "07ce931b-18c4-4c22-ba89-3cd88c7b64e8",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.78333333333334,
+              22.95416666666667
+            ],
+            [
+              39.78333333333334,
+              22.94166666666667
+            ],
+            [
+              39.79583333333334,
+              22.94166666666667
+            ],
+            [
+              39.79583333333334,
+              22.95416666666667
+            ],
+            [
+              39.78333333333334,
+              22.95416666666667
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "07ce931b-18c4-4c22-ba89-3cd88c7b64e8",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.7418,
+        "confidence_level": "medium",
+        "qc_priority": 0.2712,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8091726544170376,
+            "zscore": 0.6294125915817272
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "150b1f9f-05d3-4c21-a5b9-db8cfb217af0",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.85,
+              22.6625
+            ],
+            [
+              39.85,
+              22.650000000000002
+            ],
+            [
+              39.862500000000004,
+              22.650000000000002
+            ],
+            [
+              39.862500000000004,
+              22.6625
+            ],
+            [
+              39.85,
+              22.6625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "150b1f9f-05d3-4c21-a5b9-db8cfb217af0",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.8051,
+        "confidence_level": "high",
+        "qc_priority": 0.2704,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8152017403403974,
+            "zscore": 0.7883012193780734
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "6745d53b-12a2-4ed8-9cd7-c551e474b518",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.94166666666667,
+              21.441666666666666
+            ],
+            [
+              39.94166666666667,
+              21.429166666666667
+            ],
+            [
+              39.95416666666667,
+              21.429166666666667
+            ],
+            [
+              39.95416666666667,
+              21.441666666666666
+            ],
+            [
+              39.94166666666667,
+              21.441666666666666
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "6745d53b-12a2-4ed8-9cd7-c551e474b518",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.7983,
+        "confidence_level": "medium",
+        "qc_priority": 0.2695,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8412022110742744,
+            "zscore": 0.7267799702229073
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "56c5d950-4904-46b2-a2ea-937366ca49d4",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.1875,
+              21.0625
+            ],
+            [
+              38.1875,
+              21.05
+            ],
+            [
+              38.2,
+              21.05
+            ],
+            [
+              38.2,
+              21.0625
+            ],
+            [
+              38.1875,
+              21.0625
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "56c5d950-4904-46b2-a2ea-937366ca49d4",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7352,
+        "confidence_level": "medium",
+        "qc_priority": 0.2652,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8902901913999745,
+            "zscore": 0.4766076906639303
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eaacb7ff-cb59-4b0b-b872-f0dfb8e1426e",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.19583333333333,
+              21.025
+            ],
+            [
+              38.19583333333333,
+              21.008333333333333
+            ],
+            [
+              38.2125,
+              21.008333333333333
+            ],
+            [
+              38.2125,
+              21.020833333333332
+            ],
+            [
+              38.208333333333336,
+              21.020833333333332
+            ],
+            [
+              38.208333333333336,
+              21.025
+            ],
+            [
+              38.19583333333333,
+              21.025
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "eaacb7ff-cb59-4b0b-b872-f0dfb8e1426e",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7528,
+        "confidence_level": "medium",
+        "qc_priority": 0.2616,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8755004976538322,
+            "zscore": 0.5483361298930066
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest"
+          ],
+          "pixel_count": 15
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "8b09c2e5-e1c4-4110-980a-ce1b5ba166f6",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.07083333333333,
+              22.02916666666667
+            ],
+            [
+              38.07083333333333,
+              22.01666666666667
+            ],
+            [
+              38.083333333333336,
+              22.01666666666667
+            ],
+            [
+              38.083333333333336,
+              22.02916666666667
+            ],
+            [
+              38.07083333333333,
+              22.02916666666667
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "8b09c2e5-e1c4-4110-980a-ce1b5ba166f6",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7857,
+        "confidence_level": "medium",
+        "qc_priority": 0.2579,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.7974373776878605,
+            "zscore": 0.7661766181676528
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fb583275-7fbf-4fd9-bffb-287bce6a8823",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.900000000000006,
+              22.462500000000002
+            ],
+            [
+              39.900000000000006,
+              22.450000000000003
+            ],
+            [
+              39.91250000000001,
+              22.450000000000003
+            ],
+            [
+              39.91250000000001,
+              22.462500000000002
+            ],
+            [
+              39.900000000000006,
+              22.462500000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "fb583275-7fbf-4fd9-bffb-287bce6a8823",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.8087,
+        "confidence_level": "high",
+        "qc_priority": 0.2571,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8464433514103347,
+            "zscore": 0.7458006353339199
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "e3dfeed3-b4db-4719-8d31-4d8ff72c5d86",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.0,
+              21.945833333333336
+            ],
+            [
+              38.0,
+              21.92916666666667
+            ],
+            [
+              38.0125,
+              21.92916666666667
+            ],
+            [
+              38.0125,
+              21.945833333333336
+            ],
+            [
+              38.0,
+              21.945833333333336
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "e3dfeed3-b4db-4719-8d31-4d8ff72c5d86",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7727,
+        "confidence_level": "medium",
+        "qc_priority": 0.2499,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.7779459949428787,
+            "zscore": 0.763890716497392
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 12
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "722031b8-3e2b-422d-9e3f-7980833478cb",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.733333333333334,
+              22.5375
+            ],
+            [
+              39.733333333333334,
+              22.525000000000002
+            ],
+            [
+              39.74583333333334,
+              22.525000000000002
+            ],
+            [
+              39.74583333333334,
+              22.5375
+            ],
+            [
+              39.733333333333334,
+              22.5375
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "722031b8-3e2b-422d-9e3f-7980833478cb",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.7791,
+        "confidence_level": "medium",
+        "qc_priority": 0.2489,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8121482398832391,
+            "zscore": 0.7240984911715169
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9506ea3c-a214-4c90-9b5a-fa8efd54f68b",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.983333333333334,
+              22.358333333333334
+            ],
+            [
+              39.983333333333334,
+              22.345833333333335
+            ],
+            [
+              39.99583333333334,
+              22.345833333333335
+            ],
+            [
+              39.99583333333334,
+              22.358333333333334
+            ],
+            [
+              39.983333333333334,
+              22.358333333333334
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "9506ea3c-a214-4c90-9b5a-fa8efd54f68b",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.7272,
+        "confidence_level": "medium",
+        "qc_priority": 0.2465,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.7583863594340575,
+            "zscore": 0.6751184508654636
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0f6854b8-124b-45e1-b248-8e2508be344c",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.0375,
+              21.95416666666667
+            ],
+            [
+              38.0375,
+              21.94166666666667
+            ],
+            [
+              38.050000000000004,
+              21.94166666666667
+            ],
+            [
+              38.050000000000004,
+              21.95416666666667
+            ],
+            [
+              38.0375,
+              21.95416666666667
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "0f6854b8-124b-45e1-b248-8e2508be344c",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7001,
+        "confidence_level": "medium",
+        "qc_priority": 0.2443,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8543461202517668,
+            "zscore": 0.44290832176032063
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "a8f7b73d-b658-4cc8-b3b4-558125e5565b",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.020833333333336,
+              22.333333333333336
+            ],
+            [
+              38.020833333333336,
+              22.320833333333336
+            ],
+            [
+              38.0375,
+              22.320833333333336
+            ],
+            [
+              38.0375,
+              22.333333333333336
+            ],
+            [
+              38.020833333333336,
+              22.333333333333336
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "a8f7b73d-b658-4cc8-b3b4-558125e5565b",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7789,
+        "confidence_level": "medium",
+        "qc_priority": 0.2442,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.8036219455633109,
+            "zscore": 0.7376320421443242
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 12
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "e754c4b2-232f-4bbf-8aac-6d73b3ac52ec",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.987500000000004,
+              22.291666666666668
+            ],
+            [
+              39.987500000000004,
+              22.27916666666667
+            ],
+            [
+              40.00000000000001,
+              22.27916666666667
+            ],
+            [
+              40.00000000000001,
+              22.291666666666668
+            ],
+            [
+              39.987500000000004,
+              22.291666666666668
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "e754c4b2-232f-4bbf-8aac-6d73b3ac52ec",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.725,
+        "confidence_level": "medium",
+        "qc_priority": 0.2426,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Depth significantly different from neighbors",
+          "features": {
+            "isolation_forest": 0.7029425572256218,
+            "zscore": 0.7618155688198124
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ccd7a01a-0541-4c60-b842-8b54ac19ff0b",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.737500000000004,
+              22.608333333333338
+            ],
+            [
+              39.737500000000004,
+              22.59583333333334
+            ],
+            [
+              39.75000000000001,
+              22.59583333333334
+            ],
+            [
+              39.75000000000001,
+              22.608333333333338
+            ],
+            [
+              39.737500000000004,
+              22.608333333333338
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "ccd7a01a-0541-4c60-b842-8b54ac19ff0b",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.7521,
+        "confidence_level": "medium",
+        "qc_priority": 0.2423,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.7972038712021408,
+            "zscore": 0.6769911058420036
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2a5b5ad9-2355-418e-b3c6-ed2dd1f73a5d",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.68333333333334,
+              22.850000000000005
+            ],
+            [
+              39.68333333333334,
+              22.837500000000006
+            ],
+            [
+              39.69583333333334,
+              22.837500000000006
+            ],
+            [
+              39.69583333333334,
+              22.850000000000005
+            ],
+            [
+              39.68333333333334,
+              22.850000000000005
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "2a5b5ad9-2355-418e-b3c6-ed2dd1f73a5d",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.7707,
+        "confidence_level": "medium",
+        "qc_priority": 0.2416,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Depth significantly different from neighbors",
+          "features": {
+            "isolation_forest": 0.7608541697366175,
+            "zscore": 0.7871910533590694
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "8f6b8965-b31f-4a78-a046-0fb47b8378fb",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              39.95416666666667,
+              22.337500000000002
+            ],
+            [
+              39.95416666666667,
+              22.325000000000003
+            ],
+            [
+              39.966666666666676,
+              22.325000000000003
+            ],
+            [
+              39.966666666666676,
+              22.337500000000002
+            ],
+            [
+              39.95416666666667,
+              22.337500000000002
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "8f6b8965-b31f-4a78-a046-0fb47b8378fb",
+        "run_id": "88ea51d6-fc3c-422c-9825-df3bc66d92e1",
+        "anomaly_type": "spike",
+        "anomaly_probability": 0.7292,
+        "confidence_level": "medium",
+        "qc_priority": 0.2316,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Unusual feature combination detected by Isolation Forest",
+          "features": {
+            "isolation_forest": 0.7653309600587139,
+            "zscore": 0.6690817005286614
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "cb85b63c-ae0f-47e3-badb-548f16d4ecbe",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.07083333333333,
+              36.59583333333333
+            ],
+            [
+              -122.07083333333333,
+              36.58333333333333
+            ],
+            [
+              -122.05833333333332,
+              36.58333333333333
+            ],
+            [
+              -122.05833333333332,
+              36.59583333333333
+            ],
+            [
+              -122.07083333333333,
+              36.59583333333333
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "anomaly_id": "cb85b63c-ae0f-47e3-badb-548f16d4ecbe",
+        "run_id": "d98eabc8-b18f-4fa2-a318-c066a453568d",
+        "anomaly_type": "hole",
+        "anomaly_probability": 0.7424,
+        "confidence_level": "medium",
+        "qc_priority": 0.2356,
+        "review_decision": "pending",
+        "explanation": {
+          "primary_reason": "Depth significantly different from neighbors",
+          "features": {
+            "isolation_forest": 0.691829524479616,
+            "zscore": 0.8266739437355819
+          },
+          "thresholds": {
+            "anomaly_threshold": 0.6,
+            "zscore_threshold": 3.0,
+            "isolation_contamination": 0.1
+          },
+          "detector_flags": [
+            "isolation_forest",
+            "zscore"
+          ],
+          "pixel_count": 9
+        }
+      }
+    }
+  ]
+}

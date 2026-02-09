@@ -13,7 +13,6 @@ import {
     Button,
     IconButton,
     List,
-    ListItem,
     ListItemButton,
     ListItemText,
     TextField,
@@ -24,7 +23,6 @@ import {
     AccordionSummary,
     AccordionDetails,
     Tooltip,
-    useTheme,
 } from '@mui/material';
 import {
     ArrowBack as BackIcon,
@@ -38,12 +36,12 @@ import {
 import api from '@/services/api';
 import { useAppStore } from '@/stores';
 import QualityMetrics from '@/components/QualityMetrics';
-import type { Run, Anomaly, AnomalyListResponse, GeoJSONFeatureCollection } from '@/types/api';
+import ProductionTools from '@/components/ProductionTools';
+import type { Run, Anomaly, GeoJSONFeatureCollection } from '@/types/api';
 
 const MAPLIBRE_STYLE = 'https://demotiles.maplibre.org/style.json';
 
 export default function AnalysisPage() {
-    const theme = useTheme();
     const { showAnomalyPolygons, showHeatmap } = useAppStore((state) => ({
         showAnomalyPolygons: state.showAnomalyPolygons,
         showHeatmap: state.showHeatmap
@@ -79,6 +77,10 @@ export default function AnalysisPage() {
         zoom: 10,
     });
     const [popupInfo, setPopupInfo] = useState<Anomaly | null>(null);
+
+    // Production layer state
+    const [soundingsGeojson, setSoundingsGeojson] = useState<GeoJSONFeatureCollection | null>(null);
+    const [contoursGeojson, setContoursGeojson] = useState<GeoJSONFeatureCollection | null>(null);
 
     const loadData = useCallback(async () => {
         if (!runId) return;
@@ -389,6 +391,37 @@ export default function AnalysisPage() {
                         </Source>
                     )}
 
+                    {/* Generated Contours */}
+                    {contoursGeojson && (
+                        <Source id="production-contours" type="geojson" data={contoursGeojson}>
+                            <Layer
+                                id="contours-layer"
+                                type="line"
+                                paint={{
+                                    'line-color': '#3b82f6',
+                                    'line-width': 2,
+                                    'line-dasharray': [2, 1],
+                                }}
+                            />
+                        </Source>
+                    )}
+
+                    {/* Generated Soundings */}
+                    {soundingsGeojson && (
+                        <Source id="production-soundings" type="geojson" data={soundingsGeojson}>
+                            <Layer
+                                id="soundings-layer"
+                                type="circle"
+                                paint={{
+                                    'circle-radius': 5,
+                                    'circle-color': '#22c55e',
+                                    'circle-stroke-color': '#fff',
+                                    'circle-stroke-width': 1,
+                                }}
+                            />
+                        </Source>
+                    )}
+
                     {/* Popup */}
                     {popupInfo && (
                         <Popup
@@ -578,6 +611,23 @@ export default function AnalysisPage() {
 
                 {/* Quality Dashboard */}
                 {runId && <QualityMetrics runId={runId} anomalies={anomalies} />}
+
+                {/* Production Tools */}
+                {run && (
+                    <Accordion>
+                        <AccordionSummary expandIcon={<ExpandIcon />}>
+                            <Typography>🛠️ Production Tools</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <ProductionTools
+                                datasetId={run.dataset_id}
+                                datasetName="Current Dataset"
+                                onSoundingsGenerated={setSoundingsGeojson}
+                                onContoursGenerated={setContoursGeojson}
+                            />
+                        </AccordionDetails>
+                    </Accordion>
+                )}
 
                 <Divider />
 

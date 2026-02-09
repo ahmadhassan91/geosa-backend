@@ -61,7 +61,7 @@ export interface Run {
     created_at: string;
 }
 
-export interface RunStatus {
+export interface RunProgress {
     id: string;
     status: string;
     progress_percent: number;

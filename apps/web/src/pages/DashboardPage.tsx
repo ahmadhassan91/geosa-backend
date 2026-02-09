@@ -12,7 +12,6 @@ import {
     Button,
     IconButton,
     Chip,
-    LinearProgress,
     Dialog,
     DialogTitle,
     DialogContent,
@@ -26,9 +25,7 @@ import {
     TableContainer,
     TableHead,
     TableRow,
-    Paper,
     Tooltip,
-    useTheme,
 } from '@mui/material';
 import {
     CloudUpload as UploadIcon,
@@ -48,7 +45,6 @@ import api from '@/services/api';
 import type { Dataset, Run } from '@/types/api';
 
 export default function DashboardPage() {
-    const theme = useTheme();
     const navigate = useNavigate();
 
     const [datasets, setDatasets] = useState<Dataset[]>([]);

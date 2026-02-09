@@ -19,6 +19,7 @@ from src.api.routes import (
     anomalies_router,
     export_router,
     quality_router,
+    production_router,
 )
 from src.application.dtos import HealthResponse
 from src.infrastructure.config import settings
@@ -137,6 +138,7 @@ app.include_router(runs_router, prefix="/api/v1")
 app.include_router(anomalies_router, prefix="/api/v1")
 app.include_router(export_router, prefix="/api/v1")
 app.include_router(quality_router, prefix="/api/v1")
+app.include_router(production_router, prefix="/api/v1")
 
 
 # Root endpoint

@@ -7,6 +7,7 @@ import type {
     User,
     Dataset,
     Run,
+    RunProgress,
     Anomaly,
     AnomalyListResponse,
     ReviewLog,
@@ -130,8 +131,8 @@ class ApiClient {
         return response.data;
     }
 
-    async getRunStatus(id: string): Promise<{ id: string; status: string; progress_percent: number; current_step: string | null }> {
-        const response = await this.client.get(`/runs/${id}/status`);
+    async getRunStatus(id: string): Promise<RunProgress> {
+        const response = await this.client.get<RunProgress>(`/runs/${id}/status`);
         return response.data;
     }
 
@@ -252,6 +253,41 @@ class ApiClient {
         const response = await this.client.get(`/runs/${runId}/export/s102`, {
             responseType: 'blob',
         });
+        return response.data;
+    }
+
+    // ========================================
+    // Production (Upstream Processing)
+    // ========================================
+
+    async generateSoundings(
+        datasetId: string,
+        targetScale = 50000,
+        selectionMode: 'shoal' | 'deep' | 'representative' = 'shoal'
+    ): Promise<GeoJSONFeatureCollection> {
+        const response = await this.client.post<GeoJSONFeatureCollection>('/production/sounding-selection', {
+            dataset_id: datasetId,
+            target_scale: targetScale,
+            selection_mode: selectionMode,
+        });
+        return response.data;
+    }
+
+    async generateContours(
+        datasetId: string,
+        contourInterval = 5.0,
+        smoothingIterations = 3
+    ): Promise<GeoJSONFeatureCollection> {
+        const response = await this.client.post<GeoJSONFeatureCollection>('/production/contours', {
+            dataset_id: datasetId,
+            contour_interval: contourInterval,
+            smoothing_iterations: smoothingIterations,
+        });
+        return response.data;
+    }
+
+    async getProductionCapabilities(): Promise<unknown> {
+        const response = await this.client.get('/production/capabilities');
         return response.data;
     }
 }
