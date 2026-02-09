@@ -36,6 +36,14 @@ interface ProductionToolsProps {
     datasetName: string;
     onSoundingsGenerated?: (geojson: GeoJSONFeatureCollection) => void;
     onContoursGenerated?: (geojson: GeoJSONFeatureCollection) => void;
+    // Cleaning props
+    cleaningMethod?: 'median' | 'gaussian' | 'opening';
+    cleaningKernel?: number;
+    cleaningLoading?: boolean;
+    cleaningResult?: GeoJSONFeatureCollection | null;
+    onCleaningMethodChange?: (method: 'median' | 'gaussian' | 'opening') => void;
+    onCleaningKernelChange?: (kernel: number) => void;
+    onClean?: () => void;
 }
 
 interface SoundingResult {
@@ -55,6 +63,14 @@ export function ProductionTools({
     datasetName,
     onSoundingsGenerated,
     onContoursGenerated,
+    // Cleaning props
+    cleaningMethod,
+    cleaningKernel,
+    cleaningLoading,
+    cleaningResult,
+    onCleaningMethodChange,
+    onCleaningKernelChange,
+    onClean,
 }: ProductionToolsProps) {
     // Sounding selection state
     const [targetScale, setTargetScale] = useState(50000);
@@ -259,6 +275,65 @@ export function ProductionTools({
                             >
                                 Download GeoJSON
                             </Button>
+                        </Box>
+                    )}
+                </CardContent>
+            </Card>
+            {/* Noise Cleaning */}
+            <Card variant="outlined">
+                <CardContent>
+                    <Typography variant="subtitle1" sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
+                        <ContourIcon color="primary" /> {/* Reuse icon or add CleaningServicesIcon */}
+                        Noise Cleaning
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                        Clean raw data and visualize changes.
+                    </Typography>
+
+                    <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
+                        <FormControl size="small" sx={{ minWidth: 120 }}>
+                            <InputLabel>Method</InputLabel>
+                            <Select
+                                value={cleaningMethod || 'median'}
+                                label="Method"
+                                onChange={(e) => onCleaningMethodChange?.(e.target.value as any)}
+                            >
+                                <MenuItem value="median">Median (De-speckle)</MenuItem>
+                                <MenuItem value="gaussian">Gaussian (Smooth)</MenuItem>
+                                <MenuItem value="opening">Opening (Remove Shoals)</MenuItem>
+                            </Select>
+                        </FormControl>
+
+                        <TextField
+                            size="small"
+                            label="Kernel"
+                            type="number"
+                            value={cleaningKernel || 3}
+                            onChange={(e) => onCleaningKernelChange?.(Number(e.target.value))}
+                            sx={{ width: 80 }}
+                        />
+
+                        <Button
+                            variant="contained"
+                            color="warning"
+                            onClick={onClean}
+                            disabled={cleaningLoading}
+                            startIcon={cleaningLoading ? <CircularProgress size={16} /> : <ContourIcon />}
+                        >
+                            Clean
+                        </Button>
+                    </Stack>
+
+                    {cleaningResult && (
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                            <Chip
+                                label={`${cleaningResult.features.length} polygons`}
+                                color="warning"
+                                size="small"
+                            />
+                            <Typography variant="caption" color="text.secondary">
+                                {((cleaningResult as any).properties?.stats?.percent_changed || 0).toFixed(2)}% pixels changed
+                            </Typography>
                         </Box>
                     )}
                 </CardContent>

@@ -82,6 +82,12 @@ export default function AnalysisPage() {
     const [soundingsGeojson, setSoundingsGeojson] = useState<GeoJSONFeatureCollection | null>(null);
     const [contoursGeojson, setContoursGeojson] = useState<GeoJSONFeatureCollection | null>(null);
 
+    // Cleaning state
+    const [cleaningMethod, setCleaningMethod] = useState<'median' | 'gaussian' | 'opening'>('median');
+    const [cleaningKernel, setCleaningKernel] = useState(3);
+    const [cleaningLoading, setCleaningLoading] = useState(false);
+    const [cleaningGeojson, setCleaningGeojson] = useState<GeoJSONFeatureCollection | null>(null);
+
     const loadData = useCallback(async () => {
         if (!runId) return;
 
@@ -208,6 +214,33 @@ export default function AnalysisPage() {
             window.URL.revokeObjectURL(url);
         } catch (err) {
             setError('Failed to export S-102 format');
+        }
+    };
+
+    const handleClean = async () => {
+        if (!run?.dataset_id) return;
+        setCleaningLoading(true);
+        try {
+            const result = await api.applyNoiseCleaning(
+                run.dataset_id,
+                cleaningMethod,
+                cleaningKernel
+            );
+            setCleaningGeojson(result);
+
+            // Auto fly to first diff if exists
+            if (result.features && result.features.length > 0) {
+                // @ts-ignore - simple centroid calculation or use turf
+                const coords = result.features[0].geometry.coordinates[0][0];
+                if (coords) {
+                    mapRef.current?.flyTo({ center: coords, zoom: 14 });
+                }
+            }
+        } catch (err) {
+            const error = err as { message?: string };
+            setError('Cleaning failed: ' + (error.message || 'Unknown error'));
+        } finally {
+            setCleaningLoading(false);
         }
     };
 
@@ -624,6 +657,15 @@ export default function AnalysisPage() {
                                 datasetName="Current Dataset"
                                 onSoundingsGenerated={setSoundingsGeojson}
                                 onContoursGenerated={setContoursGeojson}
+
+                                // Cleaning props
+                                cleaningMethod={cleaningMethod}
+                                cleaningKernel={cleaningKernel}
+                                cleaningLoading={cleaningLoading}
+                                cleaningResult={cleaningGeojson}
+                                onCleaningMethodChange={setCleaningMethod}
+                                onCleaningKernelChange={setCleaningKernel}
+                                onClean={handleClean}
                             />
                         </AccordionDetails>
                     </Accordion>

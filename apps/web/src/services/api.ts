@@ -286,6 +286,21 @@ class ApiClient {
         return response.data;
     }
 
+    async applyNoiseCleaning(
+        datasetId: string,
+        method: 'median' | 'gaussian' | 'opening' = 'median',
+        kernelSize = 3,
+        threshold = 0.5
+    ): Promise<GeoJSONFeatureCollection> {
+        const response = await this.client.post<GeoJSONFeatureCollection>('/production/clean', {
+            dataset_id: datasetId,
+            method,
+            kernel_size: kernelSize,
+            threshold,
+        });
+        return response.data;
+    }
+
     async getProductionCapabilities(): Promise<unknown> {
         const response = await this.client.get('/production/capabilities');
         return response.data;

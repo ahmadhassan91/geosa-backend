@@ -16,7 +16,7 @@ from pydantic import BaseModel
 
 from src.api.dependencies import CurrentUser, DbSession
 from src.infrastructure.repositories import SQLAlchemyDatasetRepository
-from src.domain.services import select_soundings_for_scale, generate_chart_contours
+from src.domain.services import select_soundings_for_scale, generate_chart_contours, CleaningService
 
 import rasterio
 import numpy as np
@@ -39,6 +39,14 @@ class ContourGenerationRequest(BaseModel):
     dataset_id: UUID
     contour_interval: float = 5.0
     smoothing_iterations: int = 3
+
+
+class CleaningRequest(BaseModel):
+    """Request body for noise cleaning."""
+    dataset_id: UUID
+    method: Literal["median", "gaussian", "opening"] = "median"
+    kernel_size: int = 3
+    threshold: float = 0.5  # Meters difference to consider as "change"
 
 
 @router.post("/sounding-selection")
@@ -170,6 +178,77 @@ async def generate_contours(
         )
 
 
+@router.post("/clean")
+async def clean_dataset(
+    request: CleaningRequest,
+    db: DbSession,
+    user: CurrentUser,
+):
+    """
+    Apply noise cleaning to a dataset and return difference statistics.
+    
+    Generates a GeoJSON of modified areas (difference mask).
+    """
+    dataset_repo = SQLAlchemyDatasetRepository(db)
+    dataset = await dataset_repo.get_by_id(request.dataset_id)
+    
+    if dataset is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Dataset not found: {request.dataset_id}",
+        )
+    
+    # Load raster
+    try:
+        with rasterio.open(dataset.file_path) as src:
+            data = src.read(1)
+            transform = src.transform
+            nodata = src.nodata
+            
+            # Mask nodata
+            if nodata is not None:
+                data = np.where(data == nodata, np.nan, data)
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to read dataset: {e}",
+        )
+        
+    cleaning_service = CleaningService()
+    try:
+        result = cleaning_service.clean_grid(
+            grid=data,
+            method=request.method,
+            kernel_size=request.kernel_size,
+            threshold=request.threshold,
+        )
+        
+        # Convert diff mask to GeoJSON polygons
+        geojson = cleaning_service.to_geojson_diff(result.diff_mask, transform)
+        
+        # Add metadata
+        geojson["properties"] = {
+            "dataset_id": str(request.dataset_id),
+            "dataset_name": dataset.name,
+            "generated_at": datetime.utcnow().isoformat() + "Z",
+            "stats": result.stats,
+            "algorithm": {
+                "method": request.method,
+                "kernel_size": request.kernel_size,
+                "threshold": request.threshold,
+            }
+        }
+        
+        return JSONResponse(content=geojson)
+    except Exception as e:
+        traceback.print_exc()
+        sys.stdout.flush()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Cleaning failed: {str(e)}",
+        )
+
+
 @router.get("/capabilities")
 async def get_production_capabilities(user: CurrentUser):
     """
@@ -199,7 +278,6 @@ async def get_production_capabilities(user: CurrentUser):
             },
         ],
         "planned": [
-            "Noise Cleaning (configurable filters)",
             "Seam Detection",
             "Multi-survey Comparison",
         ],
