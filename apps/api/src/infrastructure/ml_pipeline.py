@@ -66,6 +66,12 @@ class RasterProcessor:
         import rasterio
         
         from rasterio.warp import transform_bounds
+        
+        # Check if file exists (handle ephemeral storage)
+        if not Path(file_path).exists():
+            raise FileNotFoundError(
+                f"Dataset file not found at {file_path}. This likely happened because the server restarted (ephemeral storage). Please upload the dataset again."
+            )
 
         with rasterio.open(file_path) as src:
             data = src.read(1)  # Read first band

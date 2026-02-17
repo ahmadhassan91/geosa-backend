@@ -22,6 +22,7 @@ import rasterio
 import numpy as np
 import traceback
 import sys
+import os
 
 
 router = APIRouter(prefix="/production", tags=["production"])
@@ -69,6 +70,13 @@ async def generate_soundings(
             detail=f"Dataset not found: {request.dataset_id}",
         )
     
+    # Check if file exists (handle ephemeral storage)
+    if not os.path.exists(dataset.file_path):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Dataset file not found on server. This likely happened because the server restarted (ephemeral storage). Please upload the dataset again.",
+        )
+
     # Load raster
     try:
         with rasterio.open(dataset.file_path) as src:
@@ -137,6 +145,13 @@ async def generate_contours(
             detail=f"Dataset not found: {request.dataset_id}",
         )
     
+    # Check if file exists (handle ephemeral storage)
+    if not os.path.exists(dataset.file_path):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Dataset file not found on server. This likely happened because the server restarted (ephemeral storage). Please upload the dataset again.",
+        )
+
     # Load raster
     try:
         with rasterio.open(dataset.file_path) as src:
@@ -198,6 +213,13 @@ async def clean_dataset(
             detail=f"Dataset not found: {request.dataset_id}",
         )
     
+    # Check if file exists (handle ephemeral storage)
+    if not os.path.exists(dataset.file_path):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Dataset file not found on server. This likely happened because the server restarted (ephemeral storage). Please upload the dataset again.",
+        )
+
     # Load raster
     try:
         with rasterio.open(dataset.file_path) as src:
