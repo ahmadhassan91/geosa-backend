@@ -94,9 +94,10 @@ export function ProductionTools({
             const count = result.features?.length || 0;
             setSoundingResult({ geojson: result, count, scale: targetScale });
             onSoundingsGenerated?.(result);
-        } catch (error: unknown) {
-            const err = error as { message?: string };
-            setSoundingError(err.message || 'Failed to generate soundings');
+        } catch (error: any) {
+            // Extract detailed error message from backend if available
+            const message = error.response?.data?.detail || error.message || 'Failed to generate soundings';
+            setSoundingError(message);
         } finally {
             setSoundingLoading(false);
         }
@@ -110,9 +111,10 @@ export function ProductionTools({
             const count = result.features?.length || 0;
             setContourResult({ geojson: result, count, interval: contourInterval });
             onContoursGenerated?.(result);
-        } catch (error: unknown) {
-            const err = error as { message?: string };
-            setContourError(err.message || 'Failed to generate contours');
+        } catch (error: any) {
+            // Extract detailed error message from backend if available
+            const message = error.response?.data?.detail || error.message || 'Failed to generate contours';
+            setContourError(message);
         } finally {
             setContourLoading(false);
         }

@@ -236,9 +236,10 @@ export default function AnalysisPage() {
                     mapRef.current?.flyTo({ center: coords, zoom: 14 });
                 }
             }
-        } catch (err) {
-            const error = err as { message?: string };
-            setError('Cleaning failed: ' + (error.message || 'Unknown error'));
+        } catch (err: any) {
+            // Extract detailed error message from backend if available
+            const message = err.response?.data?.detail || err.message || 'Cleaning failed';
+            setError(message);
         } finally {
             setCleaningLoading(false);
         }
